@@ -14,7 +14,7 @@ def run_script(script_name):
 
 if __name__ == '__main__':
     # Comprobar e instalar dependencias
-    for package in ["flask", "pytube", "moviepy"]:
+    for package in ["flask", "pytube"]:
         check_and_install(package)
 
     # Ejecutar folder_selector.py
