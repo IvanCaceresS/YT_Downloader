@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descargador de YouTube</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 20px;
+        }
+        textarea, select, input[type="text"] {
+            width: 500px; /* Aumentado de 300px a 500px */
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: small;
+            color: #666;
+        }
+        .download-info {
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Downloader</h1>
+    <form method="post">
+        URLs (una por línea):<br>
+        <textarea name="urls" rows="5"></textarea><br>
+        Formato:<br>
+        <input type="radio" name="formato" value="mp3" checked> MP3
+        <input type="radio" name="formato" value="mp4"> MP4<br>
+        Calidad (solo para MP4):<br> 
+        <select name="calidad">
+            <option value="720p">720p</option>
+            <option value="1080p">1080p</option>
+        </select><br>
+        <input type="submit" value="Descargar">
+    </form>
+    {% if download_info %}
+        <div class="download-info">
+            {% for info in download_info %}
+                <p>{{ info }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <div class="footer">
+        <p>YouTube Downloader. By: Ivaaan</p>
+    </div>
+</body>
+</html>
