@@ -1,5 +1,5 @@
 # YT_Downloader
 
-Ejecutar YT_Downloader.bat
-Seleccionar ruta donde quieres las descargas
-Descarga!
+1. Ejecutar YT_Downloader.bat
+2. Seleccionar ruta donde quieres las descargas
+3. Descarga!
